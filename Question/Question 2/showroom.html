@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>      
+    <script>
+        function country(){
+            var name = document.getElementById("myList").value;
+            if(name == "Laptop")
+            {
+                var listname = ['Lenovo','Sony','HP'];
+                document.getElementById("display").innerHTML = listname.join("<br>");
+            }
+            else if(name == "Mobile")
+            {
+                var listname = ['Iphone','Samsung','Sony'];
+                document.getElementById("display").innerHTML = listname.join("<br>");
+            }
+            else if(name == "TV")
+            {
+                var listname = ['Videocon','Airtel','Dish TV'];
+                document.getElementById("display").innerHTML = listname.join("<br>");
+            }
+            
+            
+        }
+    </script>
+</head>
+<body>   
+        <div>
+    Country <select name="list" id="myList" onchange="country()">
+        <option selected="" value="Default">--Select--</option>
+        <option value="Laptop">Laptop</option>
+        <option value="Mobile">Mobile</option>
+        <option value="TV">TV</option>
+        
+    </select>
+    
+</div>
+<br>
+<div> <span id="display"></span></div>
+</body>
+</html>
